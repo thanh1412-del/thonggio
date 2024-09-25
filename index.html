@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điều kiện thông gió</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Kiểm tra điều kiện thông gió</h1>
+    </header>
+    
+    <section class="input-section">
+        <h2>Thông tin trong nhà</h2>
+        <label for="inside-temperature">Nhiệt độ trong nhà (°C):</label>
+        <input type="number" id="inside-temperature" placeholder="Nhập nhiệt độ trong nhà">
+
+        <label for="inside-humidity">Độ ẩm tương đối trong nhà (%):</label>
+        <input type="number" id="inside-humidity" placeholder="Nhập độ ẩm trong nhà">
+
+        <h2>Thông tin ngoài trời</h2>
+        <label for="outside-temperature">Nhiệt độ ngoài trời (°C):</label>
+        <input type="number" id="outside-temperature" placeholder="Nhập nhiệt độ ngoài trời">
+
+        <label for="outside-humidity">Độ ẩm tương đối ngoài trời (%):</label>
+        <input type="number" id="outside-humidity" placeholder="Nhập độ ẩm ngoài trời">
+
+        <label for="weather">Thời tiết hiện tại:</label>
+        <select id="weather">
+            <option value="sunny">Nắng</option>
+            <option value="cloudy">Nhiều mây</option>
+            <option value="rainy">Mưa</option>
+        </select>
+
+        <button onclick="checkVentilation()">Kiểm tra điều kiện</button>
+    </section>
+
+    <section id="result-section">
+        <h2>Kết quả</h2>
+        <p id="inside-absolute-humidity">Độ ẩm tuyệt đối trong nhà: </p>
+        <p id="outside-absolute-humidity">Độ ẩm tuyệt đối ngoài trời: </p>
+        <p id="dew-point">Nhiệt độ điểm sương: </p>
+        <p id="outside-dew-point">Nhiệt độ điểm sương ngoài trời: </p> <!-- Thêm dòng này -->
+        <p id="ventilation-result">Kết luận: </p>
+    </section>
+
+   
+    
+    <script src="script.js"></script>
+</body>
+</html>
