@@ -43,7 +43,7 @@ function checkVentilation() {
     let ventilationConclusion = "Không thông gió";
 
     // Điều kiện kiểm tra thông gió
-    if (outsideTemp >= 10 && outsideTemp <= 35 && // Nhiệt độ ngoài trời trong khoảng 10-35 độ
+    if (outsideTemp >= 10 && outsideTemp <= 32 && // Nhiệt độ ngoài trời trong khoảng 10-32 độ
         insideAbsoluteHumidity > outsideAbsoluteHumidity && // Độ ẩm tuyệt đối trong nhà cao hơn ngoài nhà
         weather !== "rainy" && // Trời không có mưa
         ((outsideTemp > insideTemp && dewPointOutside < insideTemp) || // Nhiệt độ điểm sương ngoài trời thấp hơn trong nhà
